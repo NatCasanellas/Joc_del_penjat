@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joc del Penjat</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        
 </head>
 <body>
     <!--introduir paraula-->
     <div class="header">
-        <input type="text" placeholder="Introduïu una paraula">
-        <button class="start-button">Començar partida</button>
+        <input type="password" id="password" placeholder="Introduïu una paraula">
+        <span class="icon" onclick="togglePassword()">
+            <i class="fas fa-eye"></i>
+        </span>
+        <button class="start-button" onclick="startGame()">Començar partida</button>
     </div>
 
     <div class="title">Començar partida</div>
