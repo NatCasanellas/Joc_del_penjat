@@ -37,6 +37,13 @@ input[type="text"] {
     text-align: center;
 }
 
+/*titol començar partida*/
+.title {
+    background-color: aqua;
+    padding: 40px;
+    border-radius: 10px;
+}
+
 title {
     background-color: blueviolet;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -73,7 +80,7 @@ title {
     flex-wrap: wrap;
     justify-content: center;
 }
-
+/*lletres abecedari*/
 .keyboard button {
     margin: 5px;
     padding: 10px;
