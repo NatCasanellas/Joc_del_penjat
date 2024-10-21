@@ -1,5 +1,5 @@
 body {
-    background-color: bisque;
+    background-color:#EDF6FC;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -19,18 +19,35 @@ input[type="text"] {
     padding: 5px;
     margin-right: 10px;
 }
-
+/*boto començar partida a dalt dreta*/
 .start-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 5px 10px;
     border-radius: 9px;
-    background-color: rgb(213, 222, 36);
+    background-color: #D3D1FF;
     border: none;
     cursor: pointer;
 }
+/*icona del ull*/
+.icon {
+    position: absolute;
+    top: 20px;
+    right: 250px;
+}
+
+#password {
+    position: absolute;
+    top: 15px;
+    right: 275px;
+}
 
 .main {
-    background-color: rgb(80, 78, 221);
+    background-color:#EDF6FC;
     border-radius: 10px;
     padding: 50px;
     width: 80%;
@@ -39,39 +56,43 @@ input[type="text"] {
 
 /*titol començar partida*/
 .title {
-    background-color: aqua;
+    background-color: #8FAFFF;
     padding: 40px;
     border-radius: 10px;
+    font-family: 'Lucida Sans';
 }
 
-title {
-    background-color: blueviolet;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/*title {
+    background-color: rgb(25, 6, 42);
+    font-family: sans-serif;
     color: bisque;
     font-size: 24px;
     margin-bottom: 20px;
-}
+}*/
 
 .content {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(65, 10, 66);
+    background-color:#EDF6FC;
     padding: 20px;
     border-radius: 10px;
 }
 
 .player-info {
     background-color: beige;
+    font-family: 'Lucida Sans';
     color: rgb(12, 12, 12);
     padding: 10px;
     border-radius: 10px;
     width: 30%;
+    border: 1px solid black;
 }
-
+/*les fotos del penjat*/
 .game-area {
     background-color: white;
     width: 60%;
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 .keyboard {
@@ -84,8 +105,9 @@ title {
 .keyboard button {
     margin: 5px;
     padding: 10px;
-    background-color: rgb(166, 105, 160);
+    background-color: #AC7DFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border: 1px solid black;/*borde del boto lletra*/
 }
