@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
        
         const penjatImg = document.getElementById('penjat');
         if (penjatImg) {
-            penjatImg.src = `imatges/penjat${intentsFallits}.jpg`;
+            penjatImg.src = 'imatges/penjat${intentsFallits}.jpg';
         }
     }
 });
