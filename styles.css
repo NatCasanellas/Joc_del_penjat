@@ -1,113 +1,161 @@
+/* Estils generals */
 body {
-    background-color:#EDF6FC;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    color: #333;
 }
 
-.header {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-input[type="text"] {
-    padding: 5px;
-    margin-right: 10px;
-}
-/*boto començar partida a dalt dreta*/
-.start-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 5px 10px;
-    border-radius: 9px;
-    background-color: #D3D1FF;
-    border: none;
-    cursor: pointer;
-}
-/*icona del ull*/
-.icon {
-    position: absolute;
-    top: 20px;
-    right: 250px;
-}
-
-#password {
-    position: absolute;
-    top: 15px;
-    right: 275px;
-}
-
-.main {
-    background-color:#EDF6FC;
-    border-radius: 10px;
-    padding: 50px;
-    width: 80%;
+header {
+    background-color: #3498db;
+    padding: 20px;
     text-align: center;
 }
 
-/*titol començar partida*/
-.title {
-    background-color: #8FAFFF;
-    padding: 40px;
-    border-radius: 10px;
-    font-family: 'Lucida Sans';
+header form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-/*title {
-    background-color: rgb(25, 6, 42);
-    font-family: sans-serif;
-    color: bisque;
-    font-size: 24px;
+#formParaula input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#togglePassword {
+    cursor: pointer;
+    color: #fff;
+}
+
+#comencarPartida {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#comencarPartida:hover {
+    background-color: #27ae60;
+}
+
+.main {
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5em;
     margin-bottom: 20px;
-}*/
+    color: #2980b9;
+}
 
 .content {
     display: flex;
-    justify-content: space-around;
-    background-color:#EDF6FC;
-    padding: 20px;
-    border-radius: 10px;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .player-info {
-    background-color: beige;
-    font-family: 'Lucida Sans';
-    color: rgb(12, 12, 12);
-    padding: 10px;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
-    width: 30%;
-    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
 }
-/*les fotos del penjat*/
+
+.player-info h2 {
+    margin: 0;
+    color: #2980b9;
+}
+
+.player-info p {
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
 .game-area {
-    background-color: white;
-    width: 60%;
-    border: 1px solid black;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+#paraulaSecreta {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#misstges {
+    font-size: 1.2em;
+    color: #e74c3c;
+    margin-bottom: 20px;
 }
 
 .keyboard {
+    text-align: center;
     margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
-/*lletres abecedari*/
+
 .keyboard button {
-    margin: 5px;
-    padding: 10px;
-    background-color: #AC7DFF;
+    background-color: #3498db;
+    color: #fff;
     border: none;
     border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1em;
     cursor: pointer;
-    border: 1px solid black;/*borde del boto lletra*/
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.keyboard button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.keyboard button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Estils per a dispositius mòbils */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player-info,
+    .game-area {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    header form {
+        flex-direction: column;
+    }
+
+    #formParaula input[type="password"] {
+        width: 100%;
+    }
+
+    .keyboard button {
+        width: 45px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
 }
