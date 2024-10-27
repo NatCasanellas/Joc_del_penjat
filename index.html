@@ -1,58 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joc del Penjat</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 </head>
 <body>
-    <!--introduir paraula-->
-    <div class="header">
-        <input type="password" id="password" placeholder="Introduïu una paraula">
-        <span class="icon" onclick="togglePassword()">
-            <i class="fas fa-eye"></i>
-        </span>
-        <button class="start-button" onclick="startGame()">Començar partida</button>
-    </div>
+    <header>
+        <form id="formParaula">
+            <input type="password" id="inputParaula" placeholder="Introdueix una paraula">
+            <span id="togglePassword" class="eye-icon">👁️</span>
+            <button type="button" id="comencarPartida">Començar partida</button>
+        </form>
+    </header>
 
-    <div><!--class="main"-->
-        <div class="title">Començar partida</div>
-    </div> 
+    <section>
+        <section class="title">Començar partida</section>
+    </section> 
 
     <!--Partides-->
-    <div class="main"> 
-        <!--<div class="title">Començar partida</div>-->
-        <div class="content">
-            <div class="player-info">
+    <section class="main"> 
+        <section class="content">
+            <section class="player-info">
                 <h2>Jugador 1</h2>
-                <p>Punts Partides Actuals<br>0</p>
-                <p>Total Partides<br>0</p>
-                <p>Partides Guanyades<br>0</p>
-                <p>Partida Amb Més Punts:<br>14/10/2024 15:33 - 10 punts</p>
-            </div>
-            <div class="game-area">
-                <!--Aqui contingut de joc-->
-            </div>
-        </div>
-    </div>
-    <!--Butons lletres-->
-    <div class="keyboard">
-        <button>A</button><button>B</button><button>C</button>
-        <button>D</button><button>E</button><button>F</button>
-        <button>G</button><button>H</button><button>I</button>
-        <button>J</button><button>K</button><button>L</button>
-        <button>M</button><button>N</button><button>O</button>
-        <button>P</button><button>Q</button><button>R</button>
-        <button>S</button><button>T</button><button>U</button>
-        <button>V</button><button>W</button><button>X</button>
-        <button>Y</button><button>Z</button>
-    </div>
-    
-    
+                <p>Punts Partides Actuals<br><span id="puntsActuals">0</span></p>
+                <p>Total Partides<br><span id="totalPartides">0</span></p>
+                <p>Partides Guanyades<br><span id="partidesGuanyades">0</span></p>
+                <p>Partida Amb Més Punts:<br><span id="millorPartida">14/10/2024 15:33 - 10 punts</span></p>
+            </section>
 
+            <!--<img id="penjat" src="imatges/penjat0.png">
+            <img id="penjat" src="imatges/penjat_0.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_1.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_2.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_3.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_4.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_5.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_6.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_7.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_8.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_9.jpg" alt="Estat del penjat">
+            <img id="penjat" src="imatges/penjat_10.jpg" alt="Estat del penjat">-->
+
+
+
+            <section class="game-area">
+                <div id="paraulaSecreta"></div>
+                <div id="misstges"></div>
+                
+            </section>
+        </section>
+    </section>
+    <!--Butons lletres-->
+    <section class="keyboard">
+        <button id="boto_A" onclick="jugarLletra('A');">A</button>
+        <button id="boto_B" onclick="jugarLletra('B');">B</button>
+        <button id="boto_C" onclick="jugarLletra('C');">C</button>
+        <button id="boto_D" onclick="jugarLletra('D');">D</button>
+        <button id="boto_E" onclick="jugarLletra('E');">E</button>
+        <button id="boto_F" onclick="jugarLletra('F');">F</button>
+        <button id="boto_G" onclick="jugarLletra('G');">G</button>
+        <button id="boto_H" onclick="jugarLletra('H');">H</button>
+        <button id="boto_I" onclick="jugarLletra('I');">I</button>
+        <button id="boto_J" onclick="jugarLletra('J');">J</button>
+        <button id="boto_K" onclick="jugarLletra('K');">K</button>
+        <button id="boto_L" onclick="jugarLletra('L');">L</button>
+        <button id="boto_M" onclick="jugarLletra('M');">M</button>
+        <button id="boto_N" onclick="jugarLletra('N');">N</button>
+        <button id="boto_O" onclick="jugarLletra('O');">O</button>
+        <button id="boto_P" onclick="jugarLletra('P');">P</button>
+        <button id="boto_Q" onclick="jugarLletra('Q');">Q</button>
+        <button id="boto_R" onclick="jugarLletra('R');">R</button>
+        <button id="boto_S" onclick="jugarLletra('S');">S</button>
+        <button id="boto_T" onclick="jugarLletra('T');">T</button>
+        <button id="boto_U" onclick="jugarLletra('U');">U</button>
+        <button id="boto_V" onclick="jugarLletra('V');">V</button>
+        <button id="boto_W" onclick="jugarLletra('W');">W</button>
+        <button id="boto_X" onclick="jugarLletra('X');">X</button>
+        <button id="boto_Y" onclick="jugarLletra('Y');">Y</button>
+        <button id="boto_Z" onclick="jugarLletra('Z');">Z</button>
+    </section>
+    
 
     <script src="script.js"></script>
 </body>
